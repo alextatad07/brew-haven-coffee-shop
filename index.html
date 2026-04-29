@@ -1,0 +1,292 @@
+<!-- ===================== index.html ===================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew Haven Coffee</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><span>☕</span>Brew Haven Coffee</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="cart-icon" onclick="openCart()">
+            🛒 <span id="cart-count">0</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to Brew Haven Coffee</h1>
+      <p>Freshly brewed coffee, pastries, and cozy vibes.</p>
+      <a href="#menu" class="btn">View Menu</a>
+    </div>
+  </section>
+
+  <section id="featured">
+    <h2 class="section-title">Featured Favorites</h2>
+    <p class="section-subtitle">Warm drinks and fresh pastries made to brighten your day.</p>
+
+    <div class="cards">
+      <div class="card">
+        <img src="latte.jpg" alt="Latte" />
+        <h3>Latte</h3>
+        <p>Smooth espresso blended with creamy steamed milk.</p>
+      </div>
+
+      <div class="card">
+        <img src="cappuccino.jpg" alt="Cappuccino" />
+        <h3>Cappuccino</h3>
+        <p>A rich coffee classic topped with soft milk foam.</p>
+      </div>
+
+      <div class="card">
+        <img src="croissant" alt="Croissant" />
+        <h3>Croissant</h3>
+        <p>Flaky, buttery, and perfect with your morning coffee.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2 class="section-title">Our Menu</h2>
+    <p class="section-subtitle">Click Order Now, choose your size or flavor, then add it to your cart.</p>
+
+    <div class="menu-group">
+      <h3>Coffee</h3>
+      <div class="cards">
+        <div class="menu-card">
+          <img src="espresso.jpg" alt="Espresso" />
+          <h3>Espresso</h3>
+          <p>Bold, rich, and full of flavor.</p>
+          <p class="price">Starts at ₱90</p>
+          <button class="cart-btn" onclick="openOrder('Espresso', 'coffee')">Order Now</button>
+        </div>
+
+        <div class="menu-card">
+          <img src="americano.jpg" alt="Americano" />
+          <h3>Americano</h3>
+          <p>Espresso with hot water for a smooth finish.</p>
+          <p class="price">Starts at ₱110</p>
+          <button class="cart-btn" onclick="openOrder('Americano', 'coffee')">Order Now</button>
+        </div>
+
+        <div class="menu-card">
+          <img src="cappuccino.jpg" alt="Cappuccino" />
+          <h3>Cappuccino</h3>
+          <p>Espresso, steamed milk, and fluffy foam.</p>
+          <p class="price">Starts at ₱130</p>
+          <button class="cart-btn" onclick="openOrder('Cappuccino', 'coffee')">Order Now</button>
+        </div>
+
+        <div class="menu-card">
+          <img src="latte.jpg" alt="Latte" />
+          <h3>Latte</h3>
+          <p>Creamy, cozy, and lightly sweet.</p>
+          <p class="price">Starts at ₱140</p>
+          <button class="cart-btn" onclick="openOrder('Latte', 'coffee')">Order Now</button>
+        </div>
+
+        <div class="menu-card">
+          <img src="mocha.jpg" alt="Mocha" />
+          <h3>Mocha</h3>
+          <p>Chocolate, espresso, and milk in one warm cup.</p>
+          <p class="price">Starts at ₱150</p>
+          <button class="cart-btn" onclick="openOrder('Mocha', 'coffee')">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-group">
+      <h3>Desserts & Pastries</h3>
+      <div class="cards">
+        <div class="menu-card">
+          <img src="croissant.jpg" alt="Croissant" />
+          <h3>Croissant</h3>
+          <p>Buttery, flaky, and baked fresh.</p>
+          <p class="price">Starts at ₱85</p>
+          <button class="cart-btn" onclick="openOrder('Croissant', 'dessert')">Order Now</button>
+        </div>
+
+        <div class="menu-card">
+          <img src="muffin.jpg" alt="Muffin" />
+          <h3>Muffin</h3>
+          <p>Soft and sweet, perfect for any coffee.</p>
+          <p class="price">Starts at ₱75</p>
+          <button class="cart-btn" onclick="openOrder('Muffin', 'dessert')">Order Now</button>
+        </div>
+
+        <div class="menu-card">
+          <img src="donut.jpg" alt="Donut" />
+          <h3>Donut</h3>
+          <p>A simple treat with a cozy bite.</p>
+          <p class="price">Starts at ₱65</p>
+          <button class="cart-btn" onclick="openOrder('Donut', 'dessert')">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="section-subtitle">Brew Haven Coffee is a warm little coffee shop made for comfort, conversation, and carefully brewed drinks.</p>
+
+    <div class="about-content">
+      <div class="info-box">
+        <h3>Our Story</h3>
+        <p>Brew Haven Coffee started as a dream to create a peaceful space where people can enjoy good coffee and fresh pastries.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Our Mission</h3>
+        <p>To serve quality coffee and create a relaxing place for everyone.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Why Customers Love Us</h3>
+        <ul>
+          <li>Fresh beans</li>
+          <li>Friendly baristas</li>
+          <li>Cozy atmosphere</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-subtitle">For inquiries, questions, or concerns, send us a message.</p>
+
+    <div class="contact-grid">
+      <div class="contact-box">
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your question or message" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-box shop-details">
+        <h3>Visit Our Shop</h3>
+        <p><strong>Address:</strong> 123 Coffee Street, Cozy Town</p>
+        <p><strong>Opening Hours:</strong> Monday - Sunday, 8:00 AM - 9:00 PM</p>
+        <p><strong>Phone:</strong> 0912-345-6789</p>
+        <p><strong>Social Media:</strong></p>
+        <div class="socials">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="orderModal">
+    <div class="modal-box">
+      <button class="close-btn" onclick="closeOrder()">×</button>
+      <h2 id="modal-title">Order Item</h2>
+      <p class="modal-text">Choose your option before adding to cart.</p>
+
+      <label id="option-label">Choose option:</label>
+      <div id="item-option" class="options-list"></div>
+
+      <div class="quantity-row">
+        <span>Quantity:</span>
+        <div class="quantity-control">
+          <button type="button" onclick="decreaseQuantity()">−</button>
+          <span id="quantity">1</span>
+          <button type="button" onclick="increaseQuantity()">+</button>
+        </div>
+      </div>
+
+      <button class="cart-btn add-icon" onclick="addToCart()">🛒 Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="modal" id="addSuccessModal">
+    <div class="success-box">
+      <h2>☕ Nice choice!</h2>
+      <p>You successfully added this item to your cart.</p>
+      <button class="btn" onclick="closeAddSuccess()">OK</button>
+    </div>
+  </div>
+
+  <div class="modal" id="cartModal">
+    <div class="modal-box cart-box">
+      <button class="close-btn" onclick="closeCart()">×</button>
+      <h2>🛒 Your Cart</h2>
+
+      <div id="cart-items" class="cart-items">
+        <p class="empty-cart">Your cart is empty.</p>
+      </div>
+
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cart-total">₱0</strong>
+      </div>
+
+      <h3 class="checkout-title">Delivery Details</h3>
+<form class="checkout-form">
+  <input type="text" placeholder="Full Name" required />
+  <input type="text" placeholder="Contact Number" required />
+  <input type="date" required />
+  <textarea placeholder="Delivery Address" required></textarea>
+
+  <!-- PAYMENT SECTION -->
+  <label class="payment-label">Type of Payment:</label>
+
+  <div class="payment-options">
+    <label class="payment-card">
+      <input type="radio" name="payment" required />
+      <span>Credit Card</span>
+    </label>
+
+    <label class="payment-card">
+      <input type="radio" name="payment" required />
+      <span>Cash on Delivery</span>
+    </label>
+
+    <label class="payment-card">
+      <input type="radio" name="payment" required />
+      <span>GCash</span>
+    </label>
+
+    <label class="payment-card">
+      <input type="radio" name="payment" required />
+      <span>Maya</span>
+    </label>
+  </div>
+
+  <button class="btn" type="submit">Place Order</button>
+</form>
+    </div>
+  </div>
+
+  <div class="modal" id="orderSuccessModal">
+    <div class="success-box">
+      <h2>🎉 Fantastic!</h2>
+      <p>You successfully placed your order.</p>
+      <p>We’ll prepare it for your delivery date ☕</p>
+      <button onclick="closeSuccess()" class="btn">OK</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Brew Haven Coffee. Freshly brewed with love.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
